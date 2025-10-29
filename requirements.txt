@@ -1,3 +1,13 @@
-fastapi==0.115.5
-uvicorn[standard]==0.32.0
+# Core web framework
+flask==3.0.3
+flask-cors==4.0.1
+
+# HTTP client for ServiceNow API
 requests==2.32.3
+
+# Production WSGI server
+gunicorn==23.0.0
+
+# Additional utilities
+python-dateutil==2.9.0
+pytz==2024.2

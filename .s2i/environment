@@ -1,9 +1,0 @@
-# FastAPI app entry point for Gunicorn (ASGI)
-APP_MODULE=app.main:app
-
-# Gunicorn args: bind to 8080, use Uvicorn worker, set workers/timeouts, and log to stdout
-GUNICORN_CMD_ARGS=--bind=0.0.0.0:8080 -k uvicorn.workers.UvicornWorker --workers=${WEB_CONCURRENCY:-2} --timeout=30 --access-logfile - --error-logfile -
-
-# Optional tunables
-WEB_CONCURRENCY=2
-UPGRADE_PIP_TO_LATEST=true

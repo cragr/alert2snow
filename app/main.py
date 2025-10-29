@@ -57,19 +57,15 @@ def render_description(a: Dict[str, Any]) -> str:
         lines.append(desc)
     generator = safe_get(a, "generatorURL", default="")
     if generator:
-        lines.append(f"
-GeneratorURL: {generator}")
-    lines.append("
-Labels:")
+        lines.append(f"GeneratorURL: {generator}")
+    lines.append("Labels:")
     for k, v in sorted(labels.items()):
         lines.append(f"- {k}: {v}")
     if annotations:
-        lines.append("
-Annotations:")
+        lines.append("Annotations:")
         for k, v in sorted(annotations.items()):
             lines.append(f"- {k}: {v}")
-    return "
-".join(lines)
+    return "\n".join(lines)
 
 
 def build_short_desc(a: Dict[str, Any]) -> str:
